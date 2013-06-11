@@ -15,6 +15,7 @@
  */
 package org.terasology.game;
 
+import frontier.game.modes.StateQuickStart;
 import org.slf4j.LoggerFactory;
 import org.terasology.game.modes.StateMainMenu;
 import org.terasology.game.paths.PathManager;
@@ -53,7 +54,7 @@ public final class Terasology {
             }
             TerasologyEngine engine = new TerasologyEngine();
             engine.init();
-            engine.run(new StateMainMenu());
+            engine.run(new StateQuickStart());
             engine.dispose();
         } catch (Throwable t) {
             LoggerFactory.getLogger(Terasology.class).error("Uncaught Exception", t);
